@@ -37,4 +37,6 @@ def index():
     return "LINE Bot with AI + Sheets is running!"
     
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get("PORT", 5000))  # 預設5000
+    app.run(host="0.0.0.0", port=port)
+
